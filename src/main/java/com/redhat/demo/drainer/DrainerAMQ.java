@@ -33,7 +33,7 @@ public class DrainerAMQ {
 
         DrainerAMQ drainer = new DrainerAMQ();
         drainer.drain();
-        System.out.println("x");
+        
     }// main
 
     private ActiveMQServer server;
@@ -81,7 +81,7 @@ public class DrainerAMQ {
         // init source
         sourceConnectionFactory = new ActiveMQConnectionFactory("vm://0");
         //init target connection
-       targetConnectionFactory = new ActiveMQConnectionFactory("tcp://dev:62616");
+       targetConnectionFactory = new ActiveMQConnectionFactory("tcp://dev:61616");
 
 
         try {
@@ -147,7 +147,7 @@ public class DrainerAMQ {
         } catch (JMSException e) {
             e.printStackTrace();
         }
-        System.out.println("xx");
+        
     }//drain
          
 
